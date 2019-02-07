@@ -21,4 +21,4 @@ consecNums = () => {
         isDivisable = false;
     }
     document.getElementById('result').innerHTML = isDivisable;
-}
+};

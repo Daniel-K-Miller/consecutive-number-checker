@@ -1,39 +1,93 @@
 <html>
-    <head>
-        <title>Consecutive Number Checker</title>
-        
-    </head>
-    <body>
-        <div>
-            <h1>Consecutive Number Checker</h1>
-        </div>
-        <div>
-            <form>
-                <input name="number" type="text" placeholder="Enter number here..." id="number" />
-            </form>
-        </div>
-        <div>
-            <button onclick="consecNums()">Check</button>
-        </div>
-        <div>
-            <h2 id="result"></h2>
-        </div>
-    </body>
-    <script type="text/javascript" src="index.js"></script>
+
+<head>
+    <title>Consecutive Number Checker</title>
+
+</head>
+
+<body>
+    <div>
+        <h1>Consecutive Number Checker</h1>
+    </div>
+    <div id="intro">
+        <p>This application was created to determine whether a number could be divided by an array of consecutive
+            numbers (each increasing by 1) while the amount of numbers within this array is equal to the same value of
+            the
+            original number</p>
+    </div>
+    <div>
+        <form>
+            <input name="number" type="text" placeholder="Enter number here..." id="number" />
+        </form>
+    </div>
+    <div>
+        <button onclick="consecNums()">Check</button>
+    </div>
+    <div>
+        <h2 id="result"></h2>
+    </div>
+    <div>
+        <h2>Further explanation</h2>
+    </div>
+    <div id="outro">
+        <p class="lower-text">If using 3 as the starting number</p>
+        <p class="lower-text">An array of consecutive numbers could be 1, 2, 3 or 7, 8, 9 or 84, 85, 86</p>
+        <p class="lower-text">When these numbers are added up are they a multiple of the original number of 3?</p>
+        <p class="lower-text">This application will work this out // futher explanation within the javaScript file</p>
+    </div>
+    <div id="footer">
+        <p class="lower-text">The reason this application only needs the starting number as it will mimic an array
+            from the original number. This 'pretend array' only contains differences in value from each number to the starting number in
+            the array.</p>
+    </div>
+</body>
+<script type="text/javascript" src="index.js"></script>
+
 </html>
 
 <style>
-body {
-    margin: 0;
-    border: 0;
-}
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-p {
-    background-color: black;
-    color: white;
-}
+    body {
+        margin: 0 auto;
+        border: 0;
+        width: 600px;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lower-text {
+        background-color: black;
+        color: white;
+        padding: 10px;
+    }
+
+    #result {
+        width: auto;
+        height: 50px;
+        background-color: grey;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding: 0px 10px;
+        color: white;
+    }
+
+    #intro {
+        background-color: none;
+    }
+
+    #outro {
+        display: block;
+    }
+
+    #footer {
+        display: block;
+    }
+
+    #footer p {
+        background-color: grey;
+    }
 </style>
