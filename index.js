@@ -1,4 +1,5 @@
-consecNums = (num) => {
+consecNums = () => {
+    const num = document.getElementById("number").value;
     // numDiff is the 'added total' of difference between numbers in the consecutive sequence to the first number in the sequence. Which will always be 1 in a consecutive sequence (going up by 1), then 2, then 3 etc...) 
     // e.g. if the original number is 3. Any 3 consecutive numbers will give the sequence of difference of 1, 2. Totaling to an 'added total' of differnce of 3. [This can be shown as n, n+1, n+2]
     let numDiff = 0;
@@ -11,12 +12,13 @@ consecNums = (num) => {
     let isDivisable = undefined;
     if (num < 0) {
         isDivisable = "Starting number has to be a positive number!";
+// check below
+    } else if (typeof num == 'undefined') {
+        isDivisable = undefined;
     } else if (numDiff % num == 0) {
         isDivisable = true;
     } else if (numDiff % num != 0) {
         isDivisable = false;
     }
-    console.log(isDivisable);
+    document.getElementById('result').innerHTML = isDivisable;
 }
-// To test whether an array of x length consecutive numbers is divisable by x change the number within the brackets 
-consecNums(0);
