@@ -6,25 +6,28 @@
 </head>
 
 <body>
-    <div>
-        <h1>Consecutive Number Checker</h1>
-    </div>
-    <div id="intro">
-        <p>This application was created to determine whether a number could be divided by an array of consecutive
-            numbers (each increasing by 1) while the amount of numbers within this array is equal to the same value of
-            the
-            original number</p>
-    </div>
-    <div>
-        <form>
-            <input name="number" type="text" placeholder="Enter number here..." id="number" maxlength="8" />
-        </form>
-    </div>
-    <div>
-        <button onclick="consecNums()">Check</button>
-    </div>
-    <div>
-        <h2 id="result"></h2>
+    <div class="main-container">
+        <div>
+            <h1>Consecutive Number Checker</h1>
+        </div>
+        <div id="intro">
+            <p>This application was created to determine whether a number could be divided by an array of consecutive
+                numbers (each increasing by 1) while the amount of numbers within this array is equal to the same value
+                of
+                the
+                original number</p>
+        </div>
+        <div>
+            <form>
+                <input name="number" type="number" placeholder="Enter number here..." id="number" maxlength="8" />
+            </form>
+        </div>
+        <div>
+            <button onclick="consecNums()">Check</button>
+        </div>
+        <div>
+            <h2 id="result"></h2>
+        </div>
     </div>
     <div>
         <h2>Further explanation</h2>
@@ -37,9 +40,12 @@
     </div>
     <div id="footer">
         <p class="lower-text">The reason this application only needs the starting number as it will mimic an array
-            from the original number. This 'pretend array' only contains differences in value from each number to the starting number in
+            from the original number. This 'pretend array' only contains differences in value from each number to
+            the
+            starting number in
             the array.</p>
     </div>
+
 </body>
 <script type="text/javascript" src="index.js"></script>
 
@@ -56,6 +62,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+    }
+
+    .main-container {
+        background-color: aliceblue;
+        padding: 30px;
+        border-radius: 20px;
     }
 
     .lower-text {
@@ -73,6 +86,7 @@
         display: flex;
         padding: 0px 10px;
         color: white;
+        border-radius: 20px;
     }
 
     #intro {
