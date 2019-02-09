@@ -9,10 +9,10 @@
 
 <body>
     <section class="main-container">
-        <header>
+        <header class="header">
             <h1>Consecutive Number Checker</h1>
         </header>
-        <article id="intro">
+        <article class="intro" id="instructions">
             <p>Input a number in the box below and this application will calculate whether an amount of consecutive
                 numbers based on that number add up to a multiple of that original number</p>
             <form>
@@ -24,23 +24,24 @@
             <h2 id="result">Result will display here</h2>
         </article>
     </section>
-    <div>
-        <h2>Further explanation</h2>
-    </div>
-    <div id="outro">
-        <p>If using 3 as the starting number</p>
-        <p>An array of consecutive numbers could be 1, 2, 3 or 7, 8, 9 or 84, 85, 86</p>
-        <p>When these numbers are added up are they a multiple of the original number of 3?</p>
-        <p>This application will work this out // futher explanation within the javaScript file</p>
-    </div>
-    <div id="footer">
-        <p class="lower-text">The reason this application only needs the starting number as it will mimic an array
-            from the original number. This 'pretend array' only contains differences in value from each number to
-            the
-            starting number in
-            the array.</p>
-    </div>
 
+    <section class="main-container" id="second-container">
+        <div class="header">
+            <h3>Explanation</h3>
+        </div>
+        <article class="intro" id="explanation">
+            <p>Using 3 as the starting number</p>
+            <p>An array of consecutive numbers could be 1, 2, 3 or 7, 8, 9 or 84, 85, 86</p>
+            <p>If these numbers are added up are they a multiple of the original number of 3?</p>
+            <p>This application will work this out // futher explanation within the javaScript file</p>
+        </article>
+        <footer>
+            <a href="https://github.com/Daniel-K-Miller" target="_blank">
+                <img src="images/gitHubLogo.png" id="social-media" />
+                <p>Daniel-K-Miller</p>
+            </a>
+        </footer>
+    </section>
 </body>
 <script type="text/javascript" src="index.js"></script>
 
