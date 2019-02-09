@@ -1,3 +1,9 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     margin: 0 auto;
     border: 0;
@@ -6,21 +12,21 @@ body {
     font-family: "Roboto", san-serif;
 }
 
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
+/* Main */
 
 .main-container {
     background:
         linear-gradient(217deg, #1f1f2e, #33334d);
-    padding: 30px;
     border-radius: 20px;
     color: white;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container h1 {
+    margin-top: 40px;
 }
 
 .lower-text {
@@ -42,8 +48,22 @@ div {
 }
 
 #intro {
-    background-color: none;
     text-align: justify;
+    font-size: 1.2em;
+}
+
+#intro p {
+    padding: 20px;
+}
+
+#intro p:first-child {
+    background-color: #666699;
+    margin-top: 20px;
+}
+
+#intro p:last-child {
+    background-color: #8585ad;
+    margin-bottom: 20px;
 }
 
 #outro {
@@ -61,7 +81,7 @@ div {
 #number {
     border-radius: 10px;
     padding: 5px;
-    text-align: right;
+    text-align: left;
 }
 
 #btn {

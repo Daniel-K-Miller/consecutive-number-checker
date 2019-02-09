@@ -14,8 +14,9 @@ consecNums = () => {
     if (num < 0) {
         isDivisable = "Starting number has to be a positive number!";
         result.backgroundColor = "grey"
-    } else if (typeof num == 'undefined') {
+    } else if (typeof num == 'undefined' || num.length < 1) {
         isDivisable = undefined;
+        result.backgroundColor = "#ff9900";
     } else if (numDiff % num == 0) {
         isDivisable = true;
         result.backgroundColor = "green";

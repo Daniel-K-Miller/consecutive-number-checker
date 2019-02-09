@@ -12,15 +12,15 @@
             <h1>Consecutive Number Checker</h1>
         </div>
         <div id="intro">
-            <p>This application was created to determine whether a number could be divided by an array of consecutive
-                numbers (each increasing by 1) while the amount of numbers within this array is equal to the same value
-                of
-                the
-                original number</p>
+            <p>Input a number in the box below and this application will calculate whether an amount of consecutive
+                numbers based on that number add up to a multiple of that original number</p>
+            <p>e.g if the input is 3. The consecutive numbers will be 1, 2, 3. Added together equals 6. 6 is a
+                multiple of 3 so the result returns true</p>
         </div>
         <div>
             <form>
-                <input name="number" type="number" maxlength="8" placeholder="Enter number here..." id="number">
+                <input name="number" type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="8" placeholder="Enter number here..." id="number">
             </form>
         </div>
         <div>
