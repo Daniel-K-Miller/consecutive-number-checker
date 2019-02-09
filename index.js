@@ -1,6 +1,7 @@
 consecNums = () => {
     const num = document.getElementById("number").value;
     const result = document.querySelector("#result").style;
+    const preResult = document.getElementById("preResult");
     // numDiff is the 'added total' of difference between numbers in the consecutive sequence to the first number in the sequence. Which will always be 1 in a consecutive sequence (going up by 1), then 2, then 3 etc...) 
     // e.g. if the original number is 3. Any 3 consecutive numbers will give the sequence of difference of 1, 2. Totaling to an 'added total' of differnce of 3. [This can be shown as n, n+1, n+2]
     let numDiff = 0;
@@ -11,18 +12,32 @@ consecNums = () => {
     // isDivisable determines whether the numDiff divided by the original is an integer or not. 
     // Therefore determining whether for example any 3 consecutive numbers (going up in 1s), equal a multiple of 3 or not OR any 4 consecutive numbers (going up in 1s), equal a multiple of 4 or not. Etc...
     let isDivisable = undefined;
+    // Number needs to be positive for calculator to work therefore return an error message
     if (num < 0) {
         isDivisable = "Starting number has to be a positive number!";
-        result.backgroundColor = "grey"
+        result.backgroundColor = "grey";
+        preResult.innerHTML = "";
+        preResult.innerHTML = `Input number in box above`;
+        // if nothing is input return an error message
     } else if (typeof num == 'undefined' || num.length < 1) {
         isDivisable = undefined;
         result.backgroundColor = "#ff9900";
+        preResult.innerHTML = `Input number in box above`;
+        // if end result is an integer return a true message
     } else if (numDiff % num == 0) {
         isDivisable = true;
         result.backgroundColor = "green";
+        // exception of 1 due to 1 not consisting of consecutive numbers just itself (different message)
+        if (num == 1) {
+            preResult.innerHTML = `${num} divided by ${num} returns`;
+        } else {
+            preResult.innerHTML = `${num} consecutive numbers added together and divided by ${num} returns`;
+        }
+        // if end result is not an integer then return a false message
     } else if (numDiff % num != 0) {
         isDivisable = false;
         result.backgroundColor = "red";
+        preResult.innerHTML = `${num} consecutive numbers added together and divided by ${num} returns`;
     }
     document.getElementById('result').innerHTML = isDivisable;
 };

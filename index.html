@@ -8,25 +8,26 @@
 
 <body>
     <div class="main-container">
-        <div>
+        <header>
             <h1>Consecutive Number Checker</h1>
-        </div>
+        </header>
         <div id="intro">
             <p>Input a number in the box below and this application will calculate whether an amount of consecutive
                 numbers based on that number add up to a multiple of that original number</p>
-            <p>e.g if the input is 3. The consecutive numbers will be 1, 2, 3. Added together equals 6. 6 is a
-                multiple of 3 so the result returns true</p>
+            <p>e.g if the input is 3. The consecutive numbers will be 1, 2, 3. These numbers added together equals 6,
+                and 6 divided by 3 (the original number) equals 2 and is a integer (whole number) and therefore a
+                multiple of 3 so
+                the result returns true. If the end result is not an integer it returns false.</p>
         </div>
         <div>
             <form>
-                <input name="number" type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                    maxlength="8" placeholder="Enter number here..." id="number">
+                <input name="number" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="8" placeholder="Enter number here..." id="number" min="0" required>
+                <button type="button" id="btn" onclick="consecNums()">Check</button>
             </form>
         </div>
         <div>
-            <button id="btn" onclick="consecNums()">Check</button>
-        </div>
-        <div>
+            <h4 id="preResult"></h4>
             <h2 id="result"></h2>
         </div>
     </div>
@@ -34,10 +35,10 @@
         <h2>Further explanation</h2>
     </div>
     <div id="outro">
-        <p class="lower-text">If using 3 as the starting number</p>
-        <p class="lower-text">An array of consecutive numbers could be 1, 2, 3 or 7, 8, 9 or 84, 85, 86</p>
-        <p class="lower-text">When these numbers are added up are they a multiple of the original number of 3?</p>
-        <p class="lower-text">This application will work this out // futher explanation within the javaScript file</p>
+        <p>If using 3 as the starting number</p>
+        <p>An array of consecutive numbers could be 1, 2, 3 or 7, 8, 9 or 84, 85, 86</p>
+        <p>When these numbers are added up are they a multiple of the original number of 3?</p>
+        <p>This application will work this out // futher explanation within the javaScript file</p>
     </div>
     <div id="footer">
         <p class="lower-text">The reason this application only needs the starting number as it will mimic an array
