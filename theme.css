@@ -6,6 +6,7 @@
 
 body {
     margin: 0 auto;
+    margin-top: 20px;
     border: 0;
     width: 600px;
     background: linear-gradient(#f0f0f5, #d1d1e0);
@@ -19,7 +20,6 @@ body {
         linear-gradient(217deg, #1f1f2e, #33334d);
     border-radius: 20px;
     color: white;
-    margin-top: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -31,10 +31,12 @@ body {
 
 #preResult {
     margin-bottom: 10px;
+    text-align: center;
+    visibility: hidden;
 }
 
 #result {
-    width: auto;
+    width: 500px;
     height: 50px;
     background-color: grey;
     align-items: center;
@@ -43,7 +45,7 @@ body {
     padding: 0px 10px;
     color: white;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 #intro {
@@ -63,9 +65,14 @@ body {
     background-color: #8585ad;
 }
 
+#intro form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 10px 0;
+}
+
 #number {
     border-radius: 10px;
-    margin: 20px 0;
     padding: 5px;
     text-align: left;
     font-size: 1em;
@@ -76,6 +83,7 @@ body {
     border: 2px solid #c2c2d6;
     border-radius: 10px;
     padding: 5px;
+    margin: auto 0 auto 5px;
     font-size: 1em;
 }
 
@@ -101,4 +109,12 @@ body {
 
 #footer p {
     background-color: grey;
+}
+
+/* Media Queries */
+
+@media only screen and (width: 600px) {
+    body {
+        background: black;
+    }
 }

@@ -13,11 +13,12 @@ consecNums = () => {
     // Therefore determining whether for example any 3 consecutive numbers (going up in 1s), equal a multiple of 3 or not OR any 4 consecutive numbers (going up in 1s), equal a multiple of 4 or not. Etc...
     let isDivisable = undefined;
     // Number needs to be positive for calculator to work therefore return an error message
+    preResult.style.visibility = "visible";
     if (num < 0) {
         isDivisable = "Starting number has to be a positive number!";
         result.backgroundColor = "grey";
         preResult.innerHTML = "";
-        preResult.innerHTML = `Input number in box above`;
+        preResult.innerHTML = `Input a number in box above`;
         // if nothing is input return an error message
     } else if (typeof num == 'undefined' || num.length < 1) {
         isDivisable = undefined;
@@ -25,19 +26,19 @@ consecNums = () => {
         preResult.innerHTML = `Input number in box above`;
         // if end result is an integer return a true message
     } else if (numDiff % num == 0) {
-        isDivisable = true;
+        isDivisable = `A multiple of ${num}`;
         result.backgroundColor = "green";
         // exception of 1 due to 1 not consisting of consecutive numbers just itself (different message)
         if (num == 1) {
             preResult.innerHTML = `${num} divided by ${num} returns`;
         } else {
-            preResult.innerHTML = `${num} consecutive numbers added together and divided by ${num} returns`;
+            preResult.innerHTML = `${num} consecutive numbers added together are`;
         }
         // if end result is not an integer then return a false message
     } else if (numDiff % num != 0) {
-        isDivisable = false;
+        isDivisable = `NOT a multiple of ${num}`;
         result.backgroundColor = "red";
-        preResult.innerHTML = `${num} consecutive numbers added together and divided by ${num} returns`;
+        preResult.innerHTML = `${num} consecutive numbers added together are`;
     }
     document.getElementById('result').innerHTML = isDivisable;
 };

@@ -4,33 +4,26 @@
     <title>Consecutive Number Checker</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-    <div class="main-container">
+    <section class="main-container">
         <header>
             <h1>Consecutive Number Checker</h1>
         </header>
-        <div id="intro">
+        <article id="intro">
             <p>Input a number in the box below and this application will calculate whether an amount of consecutive
                 numbers based on that number add up to a multiple of that original number</p>
-            <p>e.g if the input is 3. The consecutive numbers will be 1, 2, 3. These numbers added together equals 6,
-                and 6 divided by 3 (the original number) equals 2 and is a integer (whole number) and therefore a
-                multiple of 3 so
-                the result returns true. If the end result is not an integer it returns false.</p>
-        </div>
-        <div>
             <form>
                 <input name="number" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                     maxlength="8" placeholder="Enter number here..." id="number" min="0" required>
                 <button type="button" id="btn" onclick="consecNums()">Check</button>
             </form>
-        </div>
-        <div>
-            <h4 id="preResult"></h4>
-            <h2 id="result"></h2>
-        </div>
-    </div>
+            <h4 id="preResult">Result here</h4>
+            <h2 id="result">Result will display here</h2>
+        </article>
+    </section>
     <div>
         <h2>Further explanation</h2>
     </div>
