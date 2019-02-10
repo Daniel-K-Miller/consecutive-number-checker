@@ -42,3 +42,12 @@ consecNums = () => {
     }
     document.getElementById('result').innerHTML = isDivisable;
 };
+reveal = () => {
+    const name = document.getElementById("name");
+    const gitLogo = document.getElementById("social-media");
+    name.style.visibility = "visible";
+    name.style.opacity = "1";
+    name.style.right = "0";
+    gitLogo.style.left = "0";
+    gitLogo.style.transform = "rotate(-360deg)";
+}
