@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
 }
 
 body {
@@ -141,8 +142,69 @@ footer {
 
 /* Media Queries */
 
-@media only screen and (width: 600px) {
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
     body {
         background: black;
+        width: auto;
+        margin-top: 0;
+        font-size: .9rem;
+    }
+
+    .main-container {
+        border-radius: 0;
+        height: 100vh;
+        margin: 0 auto;
+    }
+
+    .main-container .header {
+        padding: 4vh 0;
+        font-size: 4vw;
+    }
+
+    #preResult {
+        margin: 10px 20px;
+        font-size: .9em;
+    }
+
+    #result {
+        width: auto;
+        margin: 0 20px;
+    }
+
+    #second-container {
+        display: none;
+    }
+
+    section {
+        margin-bottom: 0;
+    }
+
+    #instructions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro p {
+        padding: 4vh 9vw;
+        font-size: 4.5vw;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        background: green;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        background: red;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1999px) {
+    body {
+        width: 600px;
     }
 }
