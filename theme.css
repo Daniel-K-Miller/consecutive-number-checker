@@ -88,8 +88,17 @@ form {
     font-size: 1em;
 }
 
+#info {
+    visibility: hidden;
+    filter: invert(1);
+}
+
 #btn:hover {
     background-color: #f0f0f5;
+}
+
+#info img {
+    display: none;
 }
 
 section {
@@ -188,7 +197,11 @@ footer {
     }
 
     #second-container {
-        display: none;
+        display: flex;
+        z-index: 0;
+        position: fixed;
+        top: 0;
+        visibility: hidden;
     }
 
     section {
@@ -251,8 +264,31 @@ footer {
 
     #info {
         margin: 0 auto;
+        position: relative;
+        top: 10vh;
+        visibility: visible;
+        opacity: .5;
     }
 
+    #info:hover {
+        opacity: 1;
+    }
+
+    #info img {
+        width: auto;
+        height: 6vh;
+        display: flex;
+    }
+
+    #exit {
+        width: auto;
+        height: 6vh;
+        display: flex;
+        position: relative;
+        top: 10.7vh;
+        filter: invert(1);
+        opacity: .5;
+    }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {

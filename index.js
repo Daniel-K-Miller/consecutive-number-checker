@@ -43,7 +43,7 @@ consecNums = () => {
     document.getElementById('result').innerHTML = isDivisable;
 };
 // For social media transition
-reveal = () => {
+revealGithub = () => {
     const name = document.getElementById("name");
     const gitLogo = document.getElementById("social-media");
     name.style.visibility = "visible";
@@ -51,4 +51,14 @@ reveal = () => {
     name.style.right = "0";
     gitLogo.style.left = "0";
     gitLogo.style.transform = "rotate(-360deg)";
+}
+// For responsive info
+revealInfo = () => {
+    const info = document.getElementById("second-container");
+    info.style.visibility = "visible";
+}
+hideInfo = () => {
+    const info = document.getElementById("second-container");
+    info.style.visibility = "hidden";
+
 }

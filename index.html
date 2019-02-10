@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <section class="main-container">
+    <section class="main-container" id="first-container">
         <header class="header">
             <h1>Consecutive Number Checker</h1>
         </header>
@@ -23,8 +23,8 @@
             </form>
             <h4 id="preResult">Result here</h4>
             <h2 id="result">Result will display here</h2>
-            <div id="info">
-                <img src="Images/gitHubLogo.png" id="">
+            <div id="info" onclick="revealInfo()">
+                <img src="Images/info.svg">
             </div>
         </article>
     </section>
@@ -39,11 +39,14 @@
             <p>This application will work this out // futher explanation within the javaScript file</p>
         </article>
         <footer>
-            <a href="https://github.com/Daniel-K-Miller" target="_blank" onmouseover="reveal()">
+            <a href="https://github.com/Daniel-K-Miller" target="_blank" onmouseover="revealGithub()">
                 <img src="Images/gitHubLogo.png" id="social-media" />
                 <p id="name">Daniel-K-Miller</p>
             </a>
         </footer>
+        <div>
+            <img src="Images/exit.svg" id="exit" onclick="hideInfo()">
+        </div>
     </section>
 </body>
 <script type="text/javascript" src="index.js"></script>
