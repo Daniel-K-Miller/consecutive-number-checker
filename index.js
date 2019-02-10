@@ -42,6 +42,7 @@ consecNums = () => {
     }
     document.getElementById('result').innerHTML = isDivisable;
 };
+// For social media transition
 reveal = () => {
     const name = document.getElementById("name");
     const gitLogo = document.getElementById("social-media");

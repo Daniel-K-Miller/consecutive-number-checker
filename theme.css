@@ -66,7 +66,7 @@ body {
     background-color: #8585ad;
 }
 
-#instructions form {
+form {
     display: flex;
     justify-content: center;
     margin: 20px 0 10px 0;
@@ -136,7 +136,7 @@ footer p {
     font-size: 1em;
     visibility: hidden;
     opacity: 0;
-    transition: all .5s ease-in-out;
+    transition: transform .6s ease-in-out, left .6s ease-in-out, opacity 1s ease-in-out;
     margin-left: 5px;
     position: relative;
     right: 60px;
@@ -204,6 +204,55 @@ footer {
         padding: 4vh 9vw;
         font-size: 4.5vw;
     }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 5vh 0 5vh 0;
+    }
+
+    form input {
+        margin-bottom: 2vh;
+    }
+
+    #number {
+        font-size: 5vw;
+        width: 75vw;
+        margin: 0 auto 1vh auto;
+    }
+
+    #btn {
+        margin-left: 0;
+        width: 75vw;
+        margin: 0 auto;
+        font-size: 1.5em;
+        background-color: #3366cc;
+        border: 3px solid #5c85d6;
+        color: white;
+        padding: 2vh 0;
+    }
+
+    #btn:hover {
+        background-color: #7094db;
+    }
+
+    #preResult {
+        font-size: 4vw;
+        white-space: nowrap;
+    }
+
+    #result {
+        width: 100vw;
+        margin: 0 auto;
+        padding: 0;
+        border-radius: 0;
+        height: 10vh;
+    }
+
+    #info {
+        margin: 0 auto;
+    }
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
