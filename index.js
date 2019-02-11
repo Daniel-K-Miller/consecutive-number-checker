@@ -55,10 +55,14 @@ revealGithub = () => {
 // For responsive info
 revealInfo = () => {
     const info = document.getElementById("second-container");
+    const gitLogo = document.getElementById("social-media");
     info.style.visibility = "visible";
+    gitLogo.style.visibility = "visible";
 }
 hideInfo = () => {
     const info = document.getElementById("second-container");
+    const gitLogo = document.getElementById("social-media");
     info.style.visibility = "hidden";
-
+    gitLogo.style.transition = "none";
+    gitLogo.style.visibility = "hidden";
 }

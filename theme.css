@@ -10,7 +10,7 @@ body {
     margin-top: 20px;
     border: 0;
     width: 600px;
-    background: linear-gradient(#f0f0f5, #d1d1e0);
+    background: linear-gradient(#1f0033, #1a0033);
     font-family: "Roboto", san-serif;
 }
 
@@ -164,7 +164,7 @@ footer {
     transition: all .2s ease-in-out;
 }
 
-/* Media Queries */
+/*************************** Media Queries *****************************/
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
 
@@ -179,6 +179,11 @@ footer {
         border-radius: 0;
         height: 100vh;
         margin: 0 auto;
+    }
+
+    #second-container {
+        background:
+            linear-gradient(217deg, #1f1f2e, #33334d);
     }
 
     .main-container .header {
@@ -268,6 +273,7 @@ footer {
         top: 10vh;
         visibility: visible;
         opacity: .5;
+        bottom: 0;
     }
 
     #info:hover {
@@ -277,17 +283,29 @@ footer {
     #info img {
         width: auto;
         height: 6vh;
-        display: flex;
+        display: block;
+        position: fixed;
+
+    }
+
+    footer p {
+        display: none;
     }
 
     #exit {
         width: auto;
         height: 6vh;
-        display: flex;
-        position: relative;
-        top: 10.7vh;
+        display: block;
+        position: fixed;
+        bottom: 10vh;
+        right: 44.5vw;
         filter: invert(1);
         opacity: .5;
+    }
+
+    #social-media {
+        position: inherit;
+        filter: invert(1);
     }
 }
 
