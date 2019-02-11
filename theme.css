@@ -268,12 +268,8 @@ footer {
     }
 
     #info {
-        margin: 0 auto;
-        position: relative;
-        top: 10vh;
+        display: block;
         visibility: visible;
-        opacity: .5;
-        bottom: 0;
     }
 
     #info:hover {
@@ -285,6 +281,8 @@ footer {
         height: 6vh;
         display: block;
         position: fixed;
+        bottom: 10vh;
+        right: 44.5vw;
 
     }
 
@@ -300,7 +298,6 @@ footer {
         bottom: 10vh;
         right: 44.5vw;
         filter: invert(1);
-        opacity: .5;
     }
 
     #social-media {
