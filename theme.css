@@ -281,8 +281,8 @@ footer {
         height: 6vh;
         display: block;
         position: fixed;
-        bottom: 10vh;
-        right: 44.5vw;
+        bottom: 5vh;
+        right: 45vw;
 
     }
 
@@ -295,8 +295,8 @@ footer {
         height: 6vh;
         display: block;
         position: fixed;
-        bottom: 10vh;
-        right: 44.5vw;
+        bottom: 5vh;
+        right: 45vw;
         filter: invert(1);
     }
 
