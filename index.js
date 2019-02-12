@@ -1,3 +1,11 @@
+// hardset ViewPort on load to prevent Android shrinking Viewport when keyboard is brought up
+document.onload = setTimeout(function () {
+    let viewHeight = window.innerHeight;
+    let viewWidth = window.innerWidth;
+    let viewport = document.querySelector("meta[name=viewport]")
+    viewport.setAttribute(`content`, `height=${viewHeight}, width=${viewWidth}, initial-scale=1.0`);
+}, 1);
+
 consecNums = () => {
     const num = document.getElementById("number").value;
     const result = document.querySelector("#result").style;
