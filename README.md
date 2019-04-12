@@ -8,9 +8,9 @@ This vanilla application is a consecutive number checker for checking if the num
 and then converted to an array of consecutive numbers based on that number's value (so 4 typed in would create 4 consecutive numbers;
 7 typed in would create 7 consecutive numbers) could be divided by the inputted number and result in a whole number.
 
-https://daniel-k-miller.github.io/consecutive-numbers-function/
-
 ![alt text](https://github.com/Daniel-K-Miller/consecutive-numbers-function/blob/master/preview.png?raw=true)
+
+https://daniel-k-miller.github.io/consecutive-numbers-function/
 
 ### `Getting Started`
 
