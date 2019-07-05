@@ -10,7 +10,7 @@ and then converted to an array of consecutive numbers based on that number's val
 
 ![alt text](https://github.com/Daniel-K-Miller/consecutive-numbers-function/blob/master/preview.png?raw=true)
 
-https://daniel-k-miller.github.io/consecutive-numbers-function/
+https://daniel-k-miller.github.io/consecutive-number-checker/
 
 ### `Getting Started`
 
